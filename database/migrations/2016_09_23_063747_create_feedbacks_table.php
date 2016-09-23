@@ -3,8 +3,8 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFeedbacksTable extends Migration
-{
+class CreateFeedbacksTable extends Migration {
+
     /**
      * Run the migrations.
      *
@@ -12,8 +12,10 @@ class CreateFeedbacksTable extends Migration
      */
     public function up()
     {
-        Schema::create('feedbacks', function (Blueprint $table) {
+        Schema::create('feedbacks', function(Blueprint $table)
+        {
             $table->increments('id');
+            $table->string('feed');
             $table->timestamps();
         });
     }
@@ -27,4 +29,5 @@ class CreateFeedbacksTable extends Migration
     {
         Schema::drop('feedbacks');
     }
+
 }
